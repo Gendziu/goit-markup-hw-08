@@ -1,0 +1,21 @@
+.header__container{
+    display: flex;
+    align-items: center;
+}
+.navigation__list{ 
+    display: flex;
+    align-items: center;  
+}
+.contact{
+    display: flex;
+    align-items: center;   
+}
+
+.header{
+    background: var(--background-color);
+    border-bottom: 1px solid #ececec;
+} 
+
+.header__border{
+    border-bottom: transparent;
+}

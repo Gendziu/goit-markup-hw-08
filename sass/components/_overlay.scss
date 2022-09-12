@@ -1,0 +1,26 @@
+.overlay-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -1px;
+    padding: 63px 24px;
+
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    transform: translateY(100%);
+    background-color: rgba(33, 150, 243, 0.9);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .filtr-item:hover &,
+    .filtr-item:focus &{
+        transform: translateY(0);
+    } 
+}
+
