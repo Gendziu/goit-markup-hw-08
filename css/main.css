@@ -1378,7 +1378,6 @@ main {
 
 .filtr-items-list .filtr-item {
   background: var(--background-color);
-  width: 370px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filtr-items-list .filtr-item:hover, .filtr-items-list .filtr-item:focus {
@@ -1398,11 +1397,6 @@ main {
 .item-description-box {
   padding: 20px 24px;
   border: 1px solid #EEEEEE;
-}
-@media screen and (min-width: 768px) {
-  .item-description-box {
-    padding-bottom: 56px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .item-description-box {
@@ -1428,6 +1422,10 @@ main {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+}
+
+.first-box {
+  padding-bottom: 56px;
 }
 
 :root {
