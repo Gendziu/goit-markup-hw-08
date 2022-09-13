@@ -19,7 +19,7 @@
     <title>Портфоліо</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header ">
       <div class="container header__container">
         <a href="./index.html" class="logo"
           ><span class="logo__web-part">Web</span>Studio</a
@@ -27,7 +27,7 @@
         <nav class="navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a class="navigation__link" href="./index.html">Студія</a>
+              <a class="navigation__link " href="./index.html">Студія</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link current" href="./portfolio.html">Портфоліо</a>
@@ -39,7 +39,7 @@
         </nav>
         <ul class="contact">
           <li class="contact__item">
-            <a class="contact__link" href="mailto:info@devstudio.com">
+            <a class="contact__link link" href="mailto:info@devstudio.com">
               <svg class="contact__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>info@devstudio.com</a>
@@ -51,7 +51,61 @@
               </svg>+38 096 111 11 11</a>
           </li>
         </ul>
+
+        <button type="button" class="menu-button js-open-menu" aria-controls="mobile-menu" data-menu-open>
+          <svg class="icon-menu-open" width="40" height="40">
+              <use href="./images/icons.svg#icon-menu-open"></use>
+            </svg>
+      </button>
       </div>
+      <div class="mobile-menu js-menu-container is-hidden" id=mobile-menu data-menu>
+        <button type="button" class="menu-button-close js-close-menu" data-menu-close>
+            <svg class="icon-menu-close" width="40" height="40">
+                <use href="./images/icons.svg#icon-menu-close"></use>
+                </svg>
+        </button>
+        <nav class="menu-nav">
+            <ul class="mobile-nav">
+                <li class="item"><a href="./index.html" class="link">Студія</a></li>
+                <li class="item"><a href="./portfolio.html" class="link current">Портфоліо</a></li>
+                <li class="item"><a href="" class="link">Контакти</a></li>
+            </ul>
+        </nav>
+        <ul class="mobile-contacts">
+            <li class="item">
+                <a href="tel:+380961111111" class="link phone">
+                    +38 096 111 11 11
+                </a>
+            </li>
+            <li class="item">
+                <a href="mailto:info@devstudio.com" class="link mail">
+                    info@devstudio.com
+                </a>
+            </li>
+        </ul>
+        <ul class="mobile-sm">
+            <li class="mobile-sm-item">
+                <a href="" class="mobile-sm-link">
+                    Instagram 
+                </a>
+            </li>
+            <li class="mobile-sm-item">
+                <a href="" class="mobile-sm-link">
+                    Twitter
+                </a>
+            </li>
+            <li class="mobile-sm-item">
+                <a href="" class="mobile-sm-link">
+                    Facebook
+                </a>
+            </li>
+            <li class="mobile-sm-item">
+                <a href="" class="mobile-sm-link">
+                    LinkedIn
+                </a>
+            </li>
+        </ul>
+    </div>
     </header>
 
     <main class="portfolio-main">
@@ -78,12 +132,39 @@
           <ul class="filtr-items-list">
             <li class="filtr-item">
               <div class="overlay-wrapper">
-                <img
+                <picture>
+                  <source
+                      srcset="
+                          ./images/desk-portf-img-1.jpg   1x,
+                          ./images/desk-portf-img-1-2x.jpg   2x
+                      "
+                      media="(min-width:1200px)"
+                      sizes="370px"
+                  />
+                  <source
+                      srcset="
+                          ./images/tab-portf-img-1.jpg   1x,
+                          ./images/tab-portf-img-1-2x.jpg   2x
+                      "
+                      media="(min-width:768px)"
+                      sizes="354px"
+                  />
+                  <source
+                      srcset="
+                          ./images/mob-portf-img-1.jpg   1x,
+                          ./images/mob-portf-img-1-2x.jpg   2x
+                      "
+                      media="(max-width:767px)"
+                      sizes="100vw"
+                  />
+                  <img
                   class="filtr-img"
-                  src="./images/img-portfolio1.jpg"
+                  src="./images/mob-portf-img-1.jpg"
                   alt="Приклад веб-сайта"
-                  width="370"
+                  width="100%"
                 />
+              </picture>
+                
                 <p class="overlay-text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -97,12 +178,39 @@
             </li>
             <li class="filtr-item">
               <div class="overlay-wrapper">
-                <img
+                <picture>
+                  <source
+                      srcset="
+                          ./images/desk-portf-img-2.jpg   1x,
+                          ./images/desk-portf-img-2-2x.jpg   2x
+                      "
+                      media="(min-width:1200px)"
+                      sizes="370px"
+                  />
+                  <source
+                      srcset="
+                          ./images/tab-portf-img-2.jpg   1x,
+                          ./images/tab-portf-img-2-2x.jpg   2x
+                      "
+                      media="(min-width:768px)"
+                      sizes="354px"
+                  />
+                  <source
+                      srcset="
+                          ./images/mob-portf-img-2.jpg   1x,
+                          ./images/mob-portf-img-2-2x.jpg   2x
+                      "
+                      media="(max-width:767px)"
+                      sizes="100vw"
+                  />
+                  <img
                   class="filtr-img"
-                  src="./images/img-portfolio2.jpg"
+                  src="./images/mob-portf-img-2.jpg"
                   alt="Баскетбольний постер"
-                  width="370"
+                  width="100%"
                 />
+              </picture>
+                
                 <p class="overlay-text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -118,12 +226,39 @@
             </li>
             <li class="filtr-item">
               <div class="overlay-wrapper">
-                <img
+                <picture>
+                  <source
+                      srcset="
+                          ./images/desk-portf-img-3.jpg   1x,
+                          ./images/desk-portf-img-3-2x.jpg   2x
+                      "
+                      media="(min-width:1200px)"
+                      sizes="370px"
+                  />
+                  <source
+                      srcset="
+                          ./images/tab-portf-img-3.jpg   1x,
+                          ./images/tab-portf-img-3-2x.jpg   2x
+                      "
+                      media="(min-width:768px)"
+                      sizes="354px"
+                  />
+                  <source
+                      srcset="
+                          ./images/mob-portf-img-3.jpg   1x,
+                          ./images/mob-portf-img-3-2x.jpg   2x
+                      "
+                      media="(max-width:767px)"
+                      sizes="100vw"
+                  />
+                  <img
                   class="filtr-img"
-                  src="./images/img-portfolio3.jpg"
+                  src="./images/mob-portf-img-3.jpg"
                   alt="Логотип рибного ресторану"
-                  width="370"
+                  width="100%"
                 />
+              </picture>
+                
                 <p class="overlay-text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -137,12 +272,39 @@
             </li>
             <li class="filtr-item">
               <div class="overlay-wrapper">
-                <img
+                <picture>
+                  <source
+                      srcset="
+                          ./images/desk-portf-img-4.jpg   1x,
+                          ./images/desk-portf-img-4-2x.jpg   2x
+                      "
+                      media="(min-width:1200px)"
+                      sizes="370px"
+                  />
+                  <source
+                      srcset="
+                          ./images/tab-portf-img-4.jpg   1x,
+                          ./images/tab-portf-img-4-2x.jpg   2x
+                      "
+                      media="(min-width:768px)"
+                      sizes="354px"
+                  />
+                  <source
+                      srcset="
+                          ./images/mob-portf-img-4.jpg   1x,
+                          ./images/mob-portf-img-4-2x.jpg   2x
+                      "
+                      media="(max-width:767px)"
+                      sizes="100vw"
+                  />
+                  <img
                   class="filtr-img"
-                  src="./images/img-portfolio4.jpg"
+                  src="./images/mob-portf-img-4.jpg"
                   alt="Зображення навушників"
-                  width="370"
+                  width="100%"
                 />
+              </picture>
+                
                 <p class="overlay-text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -156,12 +318,39 @@
             </li>
             <li class="filtr-item">
               <div class="overlay-wrapper">
-                <img
+                <picture>
+                  <source
+                      srcset="
+                          ./images/desk-portf-img-5.jpg   1x,
+                          ./images/desk-portf-img-5-2x.jpg   2x
+                      "
+                      media="(min-width:1200px)"
+                      sizes="370px"
+                  />
+                  <source
+                      srcset="
+                          ./images/tab-portf-img-5.jpg   1x,
+                          ./images/tab-portf-img-5-2x.jpg   2x
+                      "
+                      media="(min-width:768px)"
+                      sizes="354px"
+                  />
+                  <source
+                      srcset="
+                          ./images/mob-portf-img-5.jpg   1x,
+                          ./images/mob-portf-img-5-2x.jpg   2x
+                      "
+                      media="(max-width:767px)"
+                      sizes="100vw"
+                  />
+                  <img
                   class="filtr-img"
-                  src="./images/img-portfolio5.jpg"
+                  src="./images/mob-portf-img-5.jpg"
                   alt="Зображення коробок"
-                  width="370"
+                  width="100%"
                 />
+              </picture>
+                
                 <p class="overlay-text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -175,12 +364,39 @@
             </li>
             <li class="filtr-item">
               <div class="overlay-wrapper">
-                <img
+                <picture>
+                  <source
+                      srcset="
+                          ./images/desk-portf-img-6.jpg   1x,
+                          ./images/desk-portf-img-6-2x.jpg   2x
+                      "
+                      media="(min-width:1200px)"
+                      sizes="370px"
+                  />
+                  <source
+                      srcset="
+                          ./images/tab-portf-img-6.jpg   1x,
+                          ./images/tab-portf-img-6-2x.jpg   2x
+                      "
+                      media="(min-width:768px)"
+                      sizes="354px"
+                  />
+                  <source
+                      srcset="
+                          ./images/mob-portf-img-6.jpg   1x,
+                          ./images/mob-portf-img-6-2x.jpg   2x
+                      "
+                      media="(max-width:767px)"
+                      sizes="100vw"
+                  />
+                  <img
                   class="filtr-img"
-                  src="./images/img-portfolio6.jpg"
+                  src="./images/mob-portf-img-6.jpg"
                   alt="Зображення комп'ютера"
-                  width="370"
+                  width="100%"
                 />
+              </picture>
+                
                 <p class="overlay-text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -196,12 +412,39 @@
             </li>
             <li class="filtr-item">
               <div class="overlay-wrapper">
-                <img
+                <picture>
+                  <source
+                      srcset="
+                          ./images/desk-portf-img-7.jpg   1x,
+                          ./images/desk-portf-img-7-2x.jpg   2x
+                      "
+                      media="(min-width:1200px)"
+                      sizes="370px"
+                  />
+                  <source
+                      srcset="
+                          ./images/tab-portf-img-7.jpg   1x,
+                          ./images/tab-portf-img-7-2x.jpg   2x
+                      "
+                      media="(min-width:768px)"
+                      sizes="354px"
+                  />
+                  <source
+                      srcset="
+                          ./images/mob-portf-img-7.jpg   1x,
+                          ./images/mob-portf-img-7-2x.jpg   2x
+                      "
+                      media="(max-width:767px)"
+                      sizes="100vw"
+                  />
+                  <img
                   class="filtr-img"
-                  src="./images/img-portfolio7.jpg"
+                  src="./images/mob-portf-img-7.jpg"
                   alt="Зображення журналу"
-                  width="370"
+                  width="100%"
                 />
+              </picture>
+                
                 <p class="overlay-text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -215,12 +458,39 @@
             </li>
             <li class="filtr-item">
               <div class="overlay-wrapper">
-                <img
-                  src="./images/img-portfolio8.jpg"
+                <picture>
+                  <source
+                      srcset="
+                          ./images/desk-portf-img-8.jpg   1x,
+                          ./images/desk-portf-img-8-2x.jpg   2x
+                      "
+                      media="(min-width:1200px)"
+                      sizes="370px"
+                  />
+                  <source
+                      srcset="
+                          ./images/tab-portf-img-8.jpg   1x,
+                          ./images/tab-portf-img-8-2x.jpg   2x
+                      "
+                      media="(min-width:768px)"
+                      sizes="354px"
+                  />
+                  <source
+                      srcset="
+                          ./images/mob-portf-img-8.jpg   1x,
+                          ./images/mob-portf-img-8-2x.jpg   2x
+                      "
+                      media="(max-width:767px)"
+                      sizes="100vw"
+                  />
+                  <img
+                  src="./images/mob-portf-img-8.jpg"
                   class="filtr-img"
                   alt="Лейбл"
-                  width="370"
+                  width="100%"
                 />
+              </picture>
+                
                 <p class="overlay-text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -234,12 +504,39 @@
             </li>
             <li class="filtr-item">
               <div class="overlay-wrapper">
-                <img
+                <picture>
+                  <source
+                      srcset="
+                          ./images/desk-portf-img-9.jpg   1x,
+                          ./images/desk-portf-img-9-2x.jpg   2x
+                      "
+                      media="(min-width:1200px)"
+                      sizes="370px"
+                  />
+                  <source
+                      srcset="
+                          ./images/tab-portf-img-9.jpg   1x,
+                          ./images/tab-portf-img-9-2x.jpg   2x
+                      "
+                      media="(min-width:768px)"
+                      sizes="354px"
+                  />
+                  <source
+                      srcset="
+                          ./images/mob-portf-img-9.jpg   1x,
+                          ./images/mob-portf-img-9-2x.jpg   2x
+                      "
+                      media="(max-width:767px)"
+                      sizes="100vw"
+                  />
+                  <img
                   class="filtr-img"
-                  src="./images/img-portfolio9.jpg"
+                  src="./images/mob-portf-img-9.jpg"
                   alt="Зображення праці за ноутбуком"
-                  width="370"
+                  width="100%"
                 />
+              </picture>
+                
                 <p class="overlay-text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -258,29 +555,29 @@
     </main>
 
     <footer class="footer">
-      <div class="container footer-container">
-        <div class="contact-footer-links">
-          <a href="./index.html" class="footer-logo"
+      <div class="container footer__container">
+        <div class="footer__contact-links footer-element">
+          <a href="./index.html" class="footer__logo"
             ><span class="logo__web-part">Web</span>Studio</a
           >
           <address>
-            <ul class="address-list">
-              <li class="address-item">
+            <ul class="footer__address-list">
+              <li class="footer__address-item">
                 <a
-                  class="footer-address-link"
+                  class="footer__address-link map-link"
                   href="https://goo.gl/maps/e4QjuGKhDgKKB4nHA"
                   target="_blank"
                   rel="noopener norefferer nofollow"
                   >м.Київ, пр-т Лесі Українки,26</a
                 >
               </li>
-              <li class="address-item">
-                <a class="link" href="mailto:info@example.com"
+              <li class="footer__address-item">
+                <a class="footer__address-link" href="mailto:info@example.com"
                   >info@example.com</a
                 >
               </li>
-              <li class="address-item">
-                <a class="link" href="tel:+380991111111" target="_blank"
+              <li class="footer__address-item">
+                <a class="footer__address-link" href="tel:+380991111111" target="_blank"
                   >+38 099 111 11 11</a
                 >
               </li>
@@ -288,50 +585,63 @@
           </address>
         </div>
 
-        <div class="footer-soc">
-          <h3 class="footer-title">приєднуйтесь</h3>
-          <ul class="footer-soc-list">
-            <li class="footer-soc-item">
-              <a href="https://www.instagram.com" class="footer-soc-link">
-                <svg class="footer-soc-icon" width="20" height="20">
+        <div class="footer__soc footer-element">
+          <h3 class="footer__title">приєднуйтесь</h3>
+          <ul class="footer__soc-list">
+            <li class="footer__soc-item">
+              <a
+                href="https://www.instagram.com"
+                class="footer__soc-link"
+                target="_blank"
+              >
+                <svg class="footer__soc-icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-instagram-2"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-soc-item">
+            <li class="footer__soc-item">
               <a
                 href="https://twitter.com/home?lang=uk"
-                class="footer-soc-link"
+                class="footer__soc-link"
+                target="_blank"
               >
-                <svg class="footer-soc-icon" width="20" height="20">
+                <svg class="footer__soc-icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-soc-item">
-              <a href="https://www.facebook.com" class="footer-soc-link">
-                <svg class="footer-soc-icon" width="20" height="20">
+            <li class="footer__soc-item">
+              <a
+                href="https://www.facebook.com"
+                class="footer__soc-link"
+                target="_blank"
+              >
+                <svg class="footer__soc-icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-facebook-1"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-soc-item">
-              <a href="https://www.linkedin.com" class="footer-soc-link">
-                <svg class="footer-soc-icon" width="20" height="20">
+            <li class="footer__soc-item">
+              <a
+                href="https://www.linkedin.com"
+                class="footer__soc-link"
+                target="_blank"
+              >
+                <svg class="footer__soc-icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-linkedin-1"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-        <form class="footer-newsletter">
-          <h3 class="newsletter-title">Підпишіться на розсилку</h3>
+        <form class="footer__newsletter footer-element">
+          <h3 class="footer__newsletter-title">Підпишіться на розсилку</h3>
 
-          <div class="newsletter">
+          <div class="footer__newsletter-thumb footer-element">
             <input type="email" name="footer-email" placeholder="E-mail" />
-            <button type="submit" class="newsletter-btn">
+            <button type="submit" class="footer__newsletter-btn">
               Підписатися
-              <svg class="send-icon" height="24" width="24">
+              <svg class="footer__send-icon" height="24" width="24">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>
             </button>
@@ -339,5 +649,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
