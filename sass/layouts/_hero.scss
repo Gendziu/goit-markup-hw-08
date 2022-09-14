@@ -34,7 +34,7 @@
     @include desktop{
         background-image: 
         var(--hero-gradient), 
-        url(../images/img.jpg);
+        url(../images/desktop-hero-img.jpg);
         @include retina{
             background-image: 
             var(--hero-gradient), 
